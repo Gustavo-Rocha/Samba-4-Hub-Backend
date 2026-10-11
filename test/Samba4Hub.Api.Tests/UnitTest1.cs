@@ -1,4 +1,4 @@
-﻿namespace Samba4Hub.Testes
+namespace Samba4Hub.Api.Tests
 {
     public class UnitTest1
     {

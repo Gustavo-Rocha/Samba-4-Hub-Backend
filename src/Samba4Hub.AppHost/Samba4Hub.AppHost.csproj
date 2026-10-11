@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Samba4Hub\Samba4Hub.csproj" />
+    <ProjectReference Include="..\Samba4Hub.Api\Samba4Hub.Api.csproj" />
   </ItemGroup>
 
 </Project>

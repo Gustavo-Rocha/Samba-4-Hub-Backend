@@ -18,4 +18,8 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Samba4Hub.Domain\Samba4Hub.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

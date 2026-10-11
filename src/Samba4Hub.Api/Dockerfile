@@ -12,19 +12,19 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Samba4Hub/Samba4Hub.csproj", "Samba4Hub/"]
-RUN dotnet restore "./Samba4Hub/Samba4Hub.csproj"
+COPY ["src/Samba4Hub.Api/Samba4Hub.Api.csproj", "src/Samba4Hub.Api/"]
+RUN dotnet restore "./src/Samba4Hub.Api/Samba4Hub.Api.csproj"
 COPY . .
-WORKDIR "/src/Samba4Hub"
-RUN dotnet build "./Samba4Hub.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/src/Samba4Hub.Api"
+RUN dotnet build "./Samba4Hub.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # Esta fase é usada para publicar o projeto de serviço a ser copiado para a fase final
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./Samba4Hub.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./Samba4Hub.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 # Esta fase é usada na produção ou quando executada no VS no modo normal (padrão quando não está usando a configuração de Depuração)
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Samba4Hub.dll"]
+ENTRYPOINT ["dotnet", "Samba4Hub.Api.dll"]

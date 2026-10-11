@@ -1,0 +1,5 @@
+{
+  "appHost": {
+    "path": "src/Samba4Hub.AppHost/Samba4Hub.AppHost.csproj"
+  }
+}

@@ -1,4 +1,4 @@
-﻿namespace Samba4Hub.Infra
+namespace Samba4Hub.Data
 {
     public class Class1
     {

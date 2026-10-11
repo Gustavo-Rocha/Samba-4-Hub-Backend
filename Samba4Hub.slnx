@@ -1,0 +1,24 @@
+<Solution>
+  <Folder Name="/src/01-Apresentation/">
+    <Project Path="src/Samba4Hub.Api/Samba4Hub.Api.csproj" />
+    <Project Path="src/Samba4Hub.AppHost/Samba4Hub.AppHost.csproj" />
+  </Folder>
+  <Folder Name="/src/02-Domain/">
+    <Project Path="src/Samba4Hub.Domain/Samba4Hub.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/03-Infraestructure/">
+    <Project Path="src/Samba4Hub.Data/Samba4Hub.Data.csproj" />
+  </Folder>
+  <Folder Name="/src/04-Shareable/">
+    <Project Path="src/Samba4Hub.Shareable/Samba4Hub.Shareable.csproj" />
+    <Project Path="src/Samba4Hub.IoC/Samba4Hub.IoC.csproj" />
+    <Project Path="src/Samba4Hub.ServiceDefaults/Samba4Hub.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/test/" />
+  <Folder Name="/test/99-Testes/">
+    <Project Path="test/Samba4Hub.Api.Tests/Samba4Hub.Api.Tests.csproj" />
+    <Project Path="test/Samba4Hub.Domain.Tests/Samba4Hub.Domain.Tests.csproj" />
+    <Project Path="test/Samba4Hub.Data.Tests/Samba4Hub.Data.Tests.csproj" />
+  </Folder>
+</Solution>
